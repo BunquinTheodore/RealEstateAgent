@@ -121,37 +121,26 @@ document.querySelectorAll('.skill-progress').forEach(skill => {
     skillObserver.observe(skill);
 });
 
-// Portfolio filter functionality
-const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
-        button.classList.add('active');
-        
-        const filterValue = button.getAttribute('data-filter');
-        
-        portfolioItems.forEach(item => {
-            if (filterValue === 'all') {
-                item.classList.remove('hide');
-                setTimeout(() => {
-                    item.style.display = 'block';
-                }, 10);
-            } else {
-                if (item.getAttribute('data-category') === filterValue) {
-                    item.classList.remove('hide');
-                    setTimeout(() => {
-                        item.style.display = 'block';
-                    }, 10);
-                } else {
-                    item.classList.add('hide');
-                }
-            }
-        });
+// Experience cards animation on scroll
+const experienceObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 150);
+            experienceObserver.unobserve(entry.target);
+        }
     });
+}, {
+    threshold: 0.1
+});
+
+document.querySelectorAll('.experience-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(50px)';
+    card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    experienceObserver.observe(card);
 });
 
 // Smooth scroll for anchor links
@@ -269,26 +258,16 @@ document.querySelectorAll('.timeline-item').forEach(item => {
     timelineObserver.observe(item);
 });
 
-// Portfolio item animations
-const portfolioObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }, index * 100);
-            portfolioObserver.unobserve(entry.target);
-        }
+// Add hover effects to experience cards
+document.querySelectorAll('.experience-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
     });
-}, {
-    threshold: 0.1
-});
-
-document.querySelectorAll('.portfolio-item').forEach(item => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(30px)';
-    item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    portfolioObserver.observe(item);
 });
 
 // Add cursor trail effect (optional - can be enabled)
