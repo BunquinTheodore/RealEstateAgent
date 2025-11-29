@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Documentation – Social Media Manager Portfolio (Theodore Bunquin)</title>
+  <style>
+    :root{
+      --ink:#0f172a; --bg:#0b1020; --muted:#5b6b8a; --primary:#6366f1; --secondary:#ec4899; --card:#121a33;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:#e6ecff;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+    .doc{max-width:900px;margin:0 auto;padding:32px}
+    header h1{font-size:28px;margin:0 0 8px;background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    header .meta{color:#b9c3e6}
+    h2{font-size:22px;margin:0 0 12px;color:#fff}
+    h3{font-size:18px;margin:18px 0 8px;color:#dfe6ff}
+    p{margin:8px 0;color:#c9d3f5}
+    ul{margin:8px 0 8px 20px;color:#c9d3f5}
+    li{margin:4px 0}
+    code, pre{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+    .callout{border:1px solid rgba(99,102,241,.35);background:linear-gradient(180deg,rgba(99,102,241,.08),rgba(99,102,241,.03));padding:12px 14px;border-radius:10px;color:#dfe6ff}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px}
+    .grid{display:grid;gap:12px}
+    .cols-2{grid-template-columns:1fr 1fr}
+    .small{color:#aab6e6}
+    .muted{color:#9aa6cf}
+    .tag{display:inline-block;padding:3px 8px;border:1px solid rgba(99,102,241,.4);border-radius:999px;color:#dbe1ff;background:rgba(99,102,241,.08);margin:2px 6px 2px 0;font-size:12px}
+    .page{page-break-after:always;margin:28px 0;border-radius:12px;padding:20px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06)}
+    .wf{background:#0c142b;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px;overflow:auto}
+    .wf pre{margin:0;white-space:pre}
+    .kvs{display:grid;grid-template-columns:160px 1fr;gap:10px}
+    .kvs div:first-child{color:#aab6e6}
+    .section-title{margin-bottom:8px}
+
+    @media print{
+      body{background:#fff;color:#000;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+      .page{break-after:page;background:#fff;border:none}
+      header h1{-webkit-text-fill-color:initial;color:#000;background:none}
+      .callout{border-color:#999;background:#f7f7f7;color:#000}
+      .tag{border-color:#000;background:#eee;color:#000}
+      .muted,.small{color:#333}
+    }
+  </style>
+</head>
+<body>
+  <div class="doc">
+
+    <!-- PAGE 1: Title & Overview -->
+    <section class="page" id="page-1">
+      <header>
+        <h1>Social Media Manager Portfolio – Project Documentation</h1>
+        <div class="meta small">Author: Theodore Von Joshua M. Bunquin • Course: Human and Computer Interaction (CS 3101) • Institution: Batangas State University – The National Engineering University • Year: 2024</div>
+      </header>
+      <h2 class="section-title">1. Project Title & Overview</h2>
+      <div class="card">
+        <div class="kvs">
+          <div>Project Title</div>
+          <div>Theodore Bunquin | Social Media Manager & Digital Strategist</div>
+          <div>Purpose</div>
+          <div>Portfolio website to present skills, experience, and service packages in social media management, photography, content creation, and web development.</div>
+          <div>Audience</div>
+          <div>Prospective clients, small businesses, student organizations, and recruiters evaluating digital marketing capability.</div>
+        </div>
+      </div>
+      <h3>Objectives</h3>
+      <ul>
+        <li>Convey professional brand and core competencies with strong visual hierarchy.</li>
+        <li>Showcase experience via timeline and case-style portfolio cards.</li>
+        <li>Offer clear, tiered packages (SMM, Photography, Content, Web) to simplify decision-making.</li>
+        <li>Provide smooth navigation and responsive layout across devices.</li>
+      </ul>
+      <h3>Key Features</h3>
+      <ul>
+        <li>Animated hero with typing effect and CTAs; social links.</li>
+        <li>Stats counters and animated skill bars powered by IntersectionObserver.</li>
+        <li>Services grid with hover affordances and visual feedback.</li>
+        <li>Experience timeline and portfolio cards with staged entrance animations.</li>
+        <li>Packages page with tabs and package timelines.</li>
+      </ul>
+      <h3>Technology & Structure</h3>
+      <div class="grid cols-2">
+        <div class="card">
+          <div class="small muted">Stack</div>
+          <ul>
+            <li>HTML5 (semantic sections)</li>
+            <li>CSS3 with design tokens (CSS variables), grid, animations</li>
+            <li>Vanilla JavaScript for interactions and scroll observers</li>
+            <li>Font Awesome, Google Fonts (via CDN)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="small muted">Files</div>
+          <pre><code>index.html               # Main portfolio
+portfolio-packages.html  # Packages & examples
+style.css                # Styles & animations
+script.js                # Interactions & observers
+README.md                # Project summary</code></pre>
+        </div>
+      </div>
+      <div class="callout small">Implementation references: hero/sections in <code>index.html</code>; packages/tabs in <code>portfolio-packages.html</code>; styles in <code>style.css</code>; interactivity (typing, counters, skill bars, nav state, timeline) in <code>script.js</code>.</div>
+    </section>
+
+    <!-- PAGE 2: Personas -->
+    <section class="page" id="page-2">
+      <h2 class="section-title">2. User Persona(s)</h2>
+
+      <h3>Persona A – Small Business Owner (Food & Beverage)</h3>
+      <ul>
+        <li><b>Goals</b>: Increase local brand awareness and sales; establish consistent content cadence.</li>
+        <li><b>Behaviors</b>: Searches for bundled SMM + content services; prefers clear pricing tiers.</li>
+        <li><b>Pain Points</b>: Limited time; unsure how to measure performance; budget constraints.</li>
+        <li><b>How site helps</b>: Service cards explain scope; packages provide tiered options; analytics offering builds trust.</li>
+      </ul>
+
+      <h3>Persona B – University Org Officer</h3>
+      <ul>
+        <li><b>Goals</b>: Promote events; improve engagement; streamline content creation.</li>
+        <li><b>Behaviors</b>: Skims examples; values case-style experience proof and quick contact.</li>
+        <li><b>Pain Points</b>: Volunteer bandwidth; inconsistent visuals; little ad experience.</li>
+        <li><b>How site helps</b>: Timeline and portfolio cards map to campus work; clear CTA paths.</li>
+      </ul>
+
+      <h3>Persona C – Recruiter / Hiring Manager</h3>
+      <ul>
+        <li><b>Goals</b>: Validate skills and UX sense; gauge breadth (SMM, photo, content, web).</li>
+        <li><b>Behaviors</b>: Scans hero, services, and experience quickly; notes polish and structure.</li>
+        <li><b>Pain Points</b>: Portfolios lacking depth or clarity of role and outcomes.</li>
+        <li><b>How site helps</b>: Concise achievements, skill bars, and professional presentation.</li>
+      </ul>
+    </section>
+
+    <!-- PAGE 3: Low‑fidelity Wireframes -->
+    <section class="page" id="page-3">
+      <h2 class="section-title">3. Low‑Fidelity Wireframes</h2>
+      <p class="small">High-level structure to match current implementation.</p>
+
+      <h3>Home (index.html)</h3>
+      <div class="wf"><pre>
++----------------------------------------------------------------------------------+
+| NAV: TB | Home | About | Services | Experience | Portfolio [Hamburger @mobile]   |
++----------------------------------------------------------------------------------+
+| HERO:  [Hello, I'm Theodore] [Typing: Social Media Manager | ... ]               |
+|        [Get Started] [View Portfolio]      [Social Icons]      [Blob Image]      |
+|        [Scroll indicator]                                                       |
++----------------------------------------------------------------------------------+
+| ABOUT: Lead paragraph                                                            |
+|  [Stats: Projects | Clients | Years | Success %]   [Skills: bars 95/90/92/...]   |
++----------------------------------------------------------------------------------+
+| SERVICES (3-col grid @desktop, 1-col @mobile):                                   |
+|  [Card: SMM] [Card: Photography] [Card: Content] [Card: Web] [Card: Analytics]   |
+|  [Card: Ads]                                                                      |
++----------------------------------------------------------------------------------+
+| EXPERIENCE (Timeline):                                                            |
+|  2024–Present: Freelance SMM (Upwork)                                            |
+|  2023–2024: Facebook Page Manager                                                |
+|  2023–2024: BS in CS (BSU-NEU)                                                   |
++----------------------------------------------------------------------------------+
+| PORTFOLIO (Cards):                                                                |
+|  [Fruity Bites] [Theodore’s Journey] [Bluemoon PH] [BSU Chess Club]              |
++----------------------------------------------------------------------------------+
+| FOOTER: Logo/Tagline | Quick Links | Services                                    |
++----------------------------------------------------------------------------------+
+      </pre></div>
+
+      <h3>Packages (portfolio-packages.html)</h3>
+      <div class="wf"><pre>
++----------------------------------------------------------------------------------+
+| NAV (same)                                                                        |
++----------------------------------------------------------------------------------+
+| PORTFOLIO EXAMPLES (Cards)                                                        |
++----------------------------------------------------------------------------------+
+| SERVICE TABS: [Social Media] [Photography] [Content] [Web]                        |
+|  - Tab Content (Timeline style):                                                  |
+|    • Starter / Professional / Premium with features & price                       |
++----------------------------------------------------------------------------------+
+| CTA: “Ready to Transform...”  [Contact Me] [Back to Home]                         |
++----------------------------------------------------------------------------------+
+      </pre></div>
+    </section>
+
+    <!-- PAGE 4: UI Design Principles Applied -->
+    <section class="page" id="page-4">
+      <h2 class="section-title">4. UI Design Principles Applied</h2>
+      <ul>
+        <li><b>Visual hierarchy</b>: Gradient title treatments and larger type for hero (<code>.name</code>), clear section headers (<code>.section-title</code>, <code>.section-tag</code>).</li>
+        <li><b>Consistency & tokens</b>: Color/spacing via CSS variables in <code>:root</code>; reusable components (cards, buttons, tags).</li>
+        <li><b>Affordance & feedback</b>: Hover/active states on buttons, service cards, experience items; nav link active state updates on scroll.</li>
+        <li><b>Progressive disclosure</b>: High-level services first; detailed packages on a separate page with tabs.</li>
+        <li><b>Motion for meaning</b>: IntersectionObserver triggers counters/skill bars and staged card reveals—supports comprehension without distraction.</li>
+        <li><b>Responsive design</b>: Grid layouts collapse at breakpoints; mobile nav with hamburger; timeline adapts to single column.</li>
+        <li><b>Readability</b>: Sufficient contrast, ample spacing, and concise copy blocks; sectioned content for scanning.</li>
+      </ul>
+      <h3>Implementation References</h3>
+      <ul>
+        <li><b>Tokens & gradients</b>: <code>style.css</code> (<code>:root</code>, <code>--primary</code>/<code>--secondary</code>, <code>--dark-bg</code>).</li>
+        <li><b>Components</b>: Buttons (<code>.btn</code>), cards (<code>.service-card</code>, <code>.experience-card</code>), timeline (<code>.timeline</code>).</li>
+        <li><b>Interactions</b>: <code>script.js</code> typing effect, counters, skill bars, nav highlighting, tab logic in packages page.</li>
+        <li><b>Responsive</b>: Media queries at <code>max-width: 768px</code> adapting grid, timeline, nav.</li>
+      </ul>
+    </section>
+
+    <!-- PAGE 5: Challenges & Learnings -->
+    <section class="page" id="page-5">
+      <h2 class="section-title">5. Summary of Challenges & Learnings</h2>
+      <h3>Challenges</h3>
+      <ul>
+        <li><b>Balancing motion and performance</b>: Multiple animated elements (counters, skill bars, cards) required careful use of IntersectionObserver and CSS transitions to avoid jank.</li>
+        <li><b>Mobile navigation</b>: Ensuring the hamburger menu and nav state synced with scroll across sections without accidental overlaps.</li>
+        <li><b>Information architecture</b>: Keeping the main page concise while offering detailed services—resolved by moving package details into a dedicated tabbed page.</li>
+        <li><b>Consistency at scale</b>: Centralized variables and reusable components reduced style drift and improved maintainability.</li>
+        <li><b>Contact flow</b>: Using <code>mailto:</code> avoids backend complexity but depends on user email client availability.</li>
+      </ul>
+      <h3>Key Learnings</h3>
+      <ul>
+        <li>Design tokens (CSS variables) accelerate iteration and enforce brand consistency.</li>
+        <li>IntersectionObserver is a lightweight, performant way to orchestrate scroll-based animations.</li>
+        <li>Clear CTAs and progressive disclosure improve decision pathways for diverse personas.</li>
+        <li>Modular page structure (index vs packages) clarifies the narrative and reduces cognitive load.</li>
+      </ul>
+      <h3>How to Export as a 5‑page PDF</h3>
+      <ol>
+        <li>Open this file in your browser: <code>project-documentation.html</code>.</li>
+        <li>Press Ctrl+P (Windows) and choose “Save as PDF”.</li>
+        <li>Layout: Portrait, Pages: All, Margins: Default (or Narrow), Background graphics: On.</li>
+        <li>Each numbered section renders on its own page via print page breaks.</li>
+      </ol>
+      <p class="small muted">Optional improvements: add accessibility audit (ARIA roles/labels), performance budget (image lazy-loading if images are added), and content case studies with metrics.</p>
+    </section>
+
+  </div>
+</body>
+</html>
