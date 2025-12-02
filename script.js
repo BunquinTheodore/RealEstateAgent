@@ -28,11 +28,9 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // Typing animation
 const typingText = document.querySelector('.typing-text');
 const texts = [
-    'Social Media Manager',
-    'Content Creator',
-    'Digital Strategist',
-    'Photography Expert',
-    'Web Developer'
+    'Real Estate Agent',
+    'Property Investment Consultant',
+    'Interior Design Specialist'
 ];
 let textIndex = 0;
 let charIndex = 0;
@@ -340,5 +338,5 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-console.log('%c🚀 Welcome to Theodore\'s Portfolio!', 'font-size: 20px; color: #6366f1; font-weight: bold;');
-console.log('%c💼 Looking for a Social Media Manager? Let\'s connect!', 'font-size: 14px; color: #ec4899;');
+console.log('%c🏡 Welcome to Dennice\'s Real Estate Portfolio!', 'font-size: 20px; color: #6366f1; font-weight: bold;');
+console.log('%c💼 Looking to buy, sell, or invest? Let\'s connect!', 'font-size: 14px; color: #ec4899;');

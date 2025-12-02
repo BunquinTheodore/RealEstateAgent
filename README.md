@@ -1,15 +1,14 @@
-# Theodore Bunquin - Social Media Manager Portfolio
+# Dennice Velasco - Real Estate Portfolio
 
-![Portfolio Preview](https://placehold.co/800x400/6366f1/ffffff?text=Social+Media+Portfolio)
+![Portfolio Preview](https://placehold.co/800x400/6366f1/ffffff?text=Real+Estate+Portfolio)
 
 ## About This Project
 
-This is a professional portfolio website for **Theodore Von Joshua M. Bunquin**, showcasing expertise in social media management, photography, content creation, and web development. The website demonstrates modern web design principles with a focus on user experience and visual appeal.
+This is a professional portfolio website for **Dennice Velasco**, showcasing expertise in real estate brokerage, property investment consulting, interior design & staging, and market research & valuation. The website demonstrates modern web design principles with a focus on clarity, trust, and user experience.
 
 ### Project Information
-- **Name:** Theodore Von Joshua M. Bunquin
-- **Section:** CS 3101
-- **Course:** Human and Computer Interaction
+- **Name:** Dennice Velasco
+- **Focus:** Real Estate Agent • Investment Consultant • Interior Design Specialist
 
 ## 🌐 Live Demo
 
@@ -24,20 +23,18 @@ This is a professional portfolio website for **Theodore Von Joshua M. Bunquin**,
 - Intuitive navigation and user flow
 
 ### Portfolio Showcase
-- Detailed case studies of social media campaigns
-- Visual examples of photography work
-- Content creation samples
-- Web development projects
+- Case-style cards for pre-sales campaigns, model unit design, retail lease-up, and investor advisory
+- Clear achievements and tags for quick scanning
 
 ### Service Packages
-- **Social Media Management**
-  - Starter, Professional, and Premium packages
-- **Photography Services**
-  - Product, Brand Content, and Event photography
-- **Content Creation**
-  - Basic, Comprehensive, and Full-Service packages
-- **Web Development**
-  - Link-in-Bio pages, Landing pages, and Custom websites
+- **Brokerage & Representation**
+  - Essential Buyer, Professional Seller, Premium Concierge
+- **Interior Design & Home Staging**
+  - Basic Staging, Professional, Premium
+- **Investment Consulting**
+  - Starter Review, Strategy Plan, Quarterly Advisory
+- **Market Research & Valuation**
+  - CMA Report, Market Positioning, Quarterly Intelligence
 
 ### Interactive Elements
 - Animated counters for statistics
@@ -95,17 +92,15 @@ social-media-portfolio/
 
 ## 👤 Author
 
-**Theodore Von Joshua M. Bunquin**
+**Dennice Velasco**
 - 🔗 [LinkedIn](https://www.linkedin.com/in/theodore-bunquin-4150ba255/)
 - 📸 [Instagram](https://www.instagram.com/theodorebunquin/)
 - 📧 bunquintheodore@gmail.com
 
-## 📚 Academic Information
+## 📚 Notes
 
-- **Course:** Human and Computer Interaction
-- **Section:** CS 3101
-- **Institution:** Batangas State University - The National Engineering University
+- Social links and contact addresses are placeholders and will be updated by the owner.
 
 ## 📄 License
 
-This project is for educational purposes and showcases the skills of Theodore Von Joshua M. Bunquin. All content and design elements are proprietary to the creator.
+This project is for portfolio and informational purposes and showcases the services and experience of Dennice Velasco.
